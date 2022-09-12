@@ -20,6 +20,7 @@ Custom NanoAOD ntuple producers with additional boosted jet taggers and their PF
 ## Version
 
 The current version is based on [NanoAODv8](https://gitlab.cern.ch/cms-nanoAOD/nanoaod-doc/-/wikis/Releases/NanoAODv8).
+Developing for [NanoAODv9](https://gitlab.cern.ch/cms-nanoAOD/nanoaod-doc/-/wikis/Releases/NanoAODv9).
 
 Customizations:
 
@@ -33,21 +34,21 @@ Customizations:
 ### Set up CMSSW
 
 ```bash
-cmsrel CMSSW_10_6_19_patch2
-cd CMSSW_10_6_19_patch2/src
+cmsrel CMSSW_10_6_27
+cd CMSSW_10_6_27/src
 cmsenv
 ```
 
 ### Get customized NanoAOD producers
 
 ```bash
-git clone git@github.com:gqlcms/Customized_NanoAOD.git .
+git clone git@github.com:De-Cristo/Customized_NanoAOD.git -b NanoAODv9 .
 ```
 
 ### Compile
 
 ```bash
-scram b -j16
+scram b -j 4
 ```
 
 ### Test
@@ -56,6 +57,7 @@ scram b -j16
 cmsRun nanoTuples_mc2018_NANO.py
 ```
 
+The following lines are still for NanoAODv8, will be update soon.
 
 <!-- 
 MC (UL16, MiniAODv1):
